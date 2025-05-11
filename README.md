@@ -6,23 +6,23 @@ This project evaluates and compares two state-of-the-art models for **panoptic s
 
 ---
 
-## 📦 Panoptic-FPN
+##  Panoptic-FPN
 
 We used the `Panoptic-FPN` model with a `ResNet-50` backbone.  
 The model was loaded through **Detectron2** using the official configuration file:  
 `panoptic_fpn_R_50_3x.yaml`.
 
-### ⚙️ Setup
+###  Setup
 - Framework: **Detectron2**
 - Backbone: **ResNet-50**
 - Dataset: **COCO 2017**
 - Images tested: **500**
 
-### 📸 Example Output
+###  Example Output
 
-![Example FPNet Segmentation](images/i6.PNG)
+![Example FPNet Segmentation](images/i6.png)
 
-### 📊 Evaluation Metrics
+###  Evaluation Metrics
 
 | Category     | PQ (%) | SQ (%) | RQ (%) |
 |--------------|--------|--------|--------|
@@ -32,12 +32,12 @@ The model was loaded through **Detectron2** using the official configuration fil
 
 ---
 
-## 🤖 Mask2Former
+## Mask2Former
 
 The `Mask2Former` model was used with a `Swin-Large` backbone.  
 It directly predicts masks and class labels using a **pixel decoder + transformer decoder** with **masked attention**.
 
-### ⚙️ Setup
+### Setup
 - Model: `Mask2Former-Swin-Large`
 - Parameters: ~210 million
 - Weight size: ~800MB
@@ -45,7 +45,7 @@ It directly predicts masks and class labels using a **pixel decoder + transforme
 - Dataset: **COCO 2017 (val2017 subset)**
 - Images processed: **500**
 
-### 📸 Example Outputs
+### Example Outputs
 
 <p align="center">
   <img src="images/panoptic3.jpg" width="30%">
@@ -53,7 +53,7 @@ It directly predicts masks and class labels using a **pixel decoder + transforme
   <img src="images/panoptic.PNG" width="30%">
 </p>
 
-### 📊 Evaluation Metrics
+###  Evaluation Metrics
 
 | Category     | PQ (%) | SQ (%) | RQ (%) |
 |--------------|--------|--------|--------|
@@ -63,7 +63,7 @@ It directly predicts masks and class labels using a **pixel decoder + transforme
 
 ---
 
-## 🧠 Conclusion
+## Conclusion
 
 - **Mask2Former** significantly outperforms **Panoptic-FPN**, especially on "Stuff" categories.
 - However, it requires **much more computational power** (model size + GPU).
@@ -71,7 +71,7 @@ It directly predicts masks and class labels using a **pixel decoder + transforme
 
 ---
 
-## 📁 Requirements
+##  Requirements
 
 - Python 3.8+
 - PyTorch >= 1.10
