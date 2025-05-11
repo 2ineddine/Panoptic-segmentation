@@ -6,24 +6,23 @@ This project evaluates and compares two state-of-the-art models for **panoptic s
 
 ---
 
-## Panoptic-FPN
+## 📦 Panoptic-FPN
 
 We used the `Panoptic-FPN` model with a `ResNet-50` backbone.  
 The model was loaded through **Detectron2** using the official configuration file:  
 `panoptic_fpn_R_50_3x.yaml`.
 
-### Setup
+### ⚙️ Setup
 - Framework: **Detectron2**
 - Backbone: **ResNet-50**
 - Dataset: **COCO 2017**
-- Number of images tested: **500**
+- Images tested: **500**
 
+### 📸 Example Output
 
-### Example Output
+![Example FPNet Segmentation](images/i6.PNG)
 
-![Example FPNet Segmentation](i6.PNG)
-
-### Evaluation Metrics
+### 📊 Evaluation Metrics
 
 | Category     | PQ (%) | SQ (%) | RQ (%) |
 |--------------|--------|--------|--------|
@@ -38,23 +37,23 @@ The model was loaded through **Detectron2** using the official configuration fil
 The `Mask2Former` model was used with a `Swin-Large` backbone.  
 It directly predicts masks and class labels using a **pixel decoder + transformer decoder** with **masked attention**.
 
-###  Setup
+### ⚙️ Setup
 - Model: `Mask2Former-Swin-Large`
 - Parameters: ~210 million
 - Weight size: ~800MB
-- Framework: **Hugging Face + Colab**
-- Dataset: **COCO 2017 / val2017**
+- Framework: **Hugging Face + Google Colab**
+- Dataset: **COCO 2017 (val2017 subset)**
 - Images processed: **500**
 
 ### 📸 Example Outputs
 
-<div align="center">
-  <img src="panoptic3.jpg" width="30%"/>
-  <img src="panoptic2.png" width="30%"/>
-  <img src="panoptic.PNG" width="30%"/>
-</div>
+<p align="center">
+  <img src="images/panoptic3.jpg" width="30%">
+  <img src="images/panoptic2.png" width="30%">
+  <img src="images/panoptic.PNG" width="30%">
+</p>
 
-### Evaluation Metrics
+### 📊 Evaluation Metrics
 
 | Category     | PQ (%) | SQ (%) | RQ (%) |
 |--------------|--------|--------|--------|
@@ -64,23 +63,27 @@ It directly predicts masks and class labels using a **pixel decoder + transforme
 
 ---
 
-##  Conclusion
+## 🧠 Conclusion
 
 - **Mask2Former** significantly outperforms **Panoptic-FPN**, especially on "Stuff" categories.
-- However, Mask2Former requires **more computational resources** (large model size, GPU for inference).
-- Panoptic-FPN remains a **lighter and faster alternative** for mid-scale deployments.
+- However, it requires **much more computational power** (model size + GPU).
+- **Panoptic-FPN** remains a solid, fast alternative for lighter environments.
 
 ---
 
-
----
-
-## Requirements
+## 📁 Requirements
 
 - Python 3.8+
 - PyTorch >= 1.10
-- Detectron2
-- transformers, datasets (for Mask2Former)
+- `detectron2`
+- `transformers`, `datasets` (for Mask2Former)
 
 ---
+
+## 🚀 Usage
+
+Clone the repository:
+
+```bash
+git clone https://github.com/2ineddine/Panoptic-Segmentation.git
 
