@@ -80,7 +80,7 @@ It directly predicts masks and class labels using a **pixel decoder + transforme
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 Clone the repository:
 
